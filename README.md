@@ -1,2 +1,2 @@
 # MAliuchen.github.io
-这是一个博客系统
+[这是一个博客系统](https://maliuchen.github.io/)
