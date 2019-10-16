@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MySQL SQL语法及数据库创建 | Chen</title>
+  <title>查询 | Chen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL SQL语法及数据库创建和五种约束     SQL语法  添加  INSERT INTO 语法  INSERT INTO 语句可以有两种编写形式  第一种形式无需指定要插入数据的列名，只需提供被插入的值即可（必须把该条记录的字段全部添加）&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; INSERT INTO 表名 VALUSE(字段1，字段2，字段3…） 第二种形式需要指定列名及">
+  <meta name="description" content="查询语句SELECT 列名称 FROM 表名称      （查询指定列所有数据）SELECT * FROM 表名称 （查询该表所有的列的数据）   按条件查询SELECT 列名称 &amp;nbsp;FROM&amp;nbsp; 表名称&amp;nbsp; where &amp;nbsp; 条件   DISTINCT关键字将查询到的重复信息合并SELECT &amp;nbsp;DISTINCT &amp;nbsp;列名称 &amp;nbsp;FROM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL SQL语法及数据库创建">
-<meta property="og:url" content="http://yoursite.com/2019/10/14/MySQL-SQL-基础语法/index.html">
+<meta property="og:title" content="查询">
+<meta property="og:url" content="http://yoursite.com/2019/10/16/‘查询’/index.html">
 <meta property="og:site_name" content="Chen">
-<meta property="og:description" content="MySQL SQL语法及数据库创建和五种约束     SQL语法  添加  INSERT INTO 语法  INSERT INTO 语句可以有两种编写形式  第一种形式无需指定要插入数据的列名，只需提供被插入的值即可（必须把该条记录的字段全部添加）&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; INSERT INTO 表名 VALUSE(字段1，字段2，字段3…） 第二种形式需要指定列名及">
+<meta property="og:description" content="查询语句SELECT 列名称 FROM 表名称      （查询指定列所有数据）SELECT * FROM 表名称 （查询该表所有的列的数据）   按条件查询SELECT 列名称 &amp;nbsp;FROM&amp;nbsp; 表名称&amp;nbsp; where &amp;nbsp; 条件   DISTINCT关键字将查询到的重复信息合并SELECT &amp;nbsp;DISTINCT &amp;nbsp;列名称 &amp;nbsp;FROM">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-15T02:13:56.942Z">
+<meta property="og:updated_time" content="2019-10-16T11:12:29.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL SQL语法及数据库创建">
-<meta name="twitter:description" content="MySQL SQL语法及数据库创建和五种约束     SQL语法  添加  INSERT INTO 语法  INSERT INTO 语句可以有两种编写形式  第一种形式无需指定要插入数据的列名，只需提供被插入的值即可（必须把该条记录的字段全部添加）&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; INSERT INTO 表名 VALUSE(字段1，字段2，字段3…） 第二种形式需要指定列名及">
+<meta name="twitter:title" content="查询">
+<meta name="twitter:description" content="查询语句SELECT 列名称 FROM 表名称      （查询指定列所有数据）SELECT * FROM 表名称 （查询该表所有的列的数据）   按条件查询SELECT 列名称 &amp;nbsp;FROM&amp;nbsp; 表名称&amp;nbsp; where &amp;nbsp; 条件   DISTINCT关键字将查询到的重复信息合并SELECT &amp;nbsp;DISTINCT &amp;nbsp;列名称 &amp;nbsp;FROM">
   
     <link rel="alternative" href="/atom.xml" title="Chen" type="application/atom+xml">
   
@@ -152,59 +152,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MySQL-SQL-基础语法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-‘查询’" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MySQL SQL语法及数据库创建
+      查询
     </h1>
   
 
         
-        <a href="/2019/10/14/MySQL-SQL-基础语法/" class="archive-article-date">
-  	<time datetime="2019-10-14T12:16:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
+        <a href="/2019/10/16/‘查询’/" class="archive-article-date">
+  	<time datetime="2019-10-16T11:07:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="MySQL-SQL语法及数据库创建和五种约束"><a href="#MySQL-SQL语法及数据库创建和五种约束" class="headerlink" title="MySQL SQL语法及数据库创建和五种约束"></a><em>MySQL SQL语法及数据库创建和五种约束</em></h1><hr>
-<p> <font size="5">   <em>SQL语法</em></font></p>
-<ul>
-<li><p>添加  INSERT INTO 语法</p>
-<blockquote>
-<p>INSERT INTO 语句可以有两种编写形式</p>
-<ol>
-<li>第一种形式无需指定要插入数据的列名，只需提供被插入的值即可（必须把该条记录的字段全部添加）<br>&nbsp; &nbsp; &nbsp; &nbsp; INSERT INTO 表名 VALUSE(字段1，字段2，字段3…）</li>
-<li>第二种形式需要指定列名及被插入的值：<br>&nbsp; &nbsp; &nbsp; &nbsp; 表名（字段1，字段2，字段3）VALUSE(值1，值2，值3)</li>
-</ol>
-</blockquote>
-</li>
-<li><p>删除  DELETE 语法</p>
-<blockquote>
-<p>DELETE FORM 表名 WHERE 条件字段=值</p>
-</blockquote>
-</li>
-<li><p>更改  UPDATE 语法</p>
-<blockquote>
-<p>UPDATE 表名 SET 要更新的字段=值 WHERE 条件字段=值</p>
-</blockquote>
-<h2 id="nbsp-nbsp-具体实例"><a href="#nbsp-nbsp-具体实例" class="headerlink" title=" &nbsp;&nbsp;具体实例"></a> <font size="2">&nbsp;&nbsp;<a href="https://hxp233.github.io/2019/10/14/%E6%93%8D%E4%BD%9C%E8%A1%A8%E4%B8%AD%E6%95%B0%E6%8D%AE1/" target="_blank" rel="noopener">具体实例</a></font></h2></li>
-</ul>
-<p>  <font size="5"> <em>数据库的创建及五种约束</em></font></p>
-<p> <font size="3">&nbsp;&nbsp;&nbsp;&nbsp;创建数据库&gt;创建表&gt;创建列&gt;把数据存到行中（创建数据库时编码方式一般选择utf-8，排序规则一般选择 utf-8_genral_cl)</font></p>
-<p><font size="4"> 五种约束</font> </p>
-<ul>
-<li>&nbsp; &nbsp; &nbsp;主键约束</li>
-<li>&nbsp; &nbsp; &nbsp;外键约束</li>
-<li>&nbsp; &nbsp; &nbsp;唯一约束</li>
-<li>&nbsp; &nbsp; &nbsp;非空约束</li>
-<li>&nbsp; &nbsp; &nbsp;默认约束   </li>
-</ul>
+        <h3 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h3><p>SELECT 列名称 FROM 表名称      （查询指定列所有数据）<br>SELECT * FROM 表名称 （查询该表所有的列的数据）</p>
+<hr>
+<p><font size="4"> <b>按条件查询</b></font><br>SELECT 列名称 &nbsp;FROM&nbsp; 表名称&nbsp; where &nbsp; 条件<br><font size="4"> <b>  DISTINCT关键字将查询到的重复信息合并</b></font><br>SELECT &nbsp;DISTINCT &nbsp;列名称 &nbsp;FROM 表名 &nbsp; WHERE &nbsp;条件<br><font size="4"> <b> LIMIT关键字将查询到的数据按指定格式输出</b></font><br>SELECT &nbsp;列名称 &nbsp;from &nbsp;表名 LIMIT  值1,值2;    ( 值1为从第几行开始；值2为输出几条数据）<br><font size="4"> <b>升序于降序</b></font><br>SELECT&nbsp; 列名称 from &nbsp;表名 &nbsp;order by 列名称 asc （asc为升序;desc为降序）</p>
 
       
 
@@ -263,7 +233,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/14/MySQL-SQL-基础语法/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/16/‘查询’/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -277,15 +247,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/16/‘查询’/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          查询
-        
-      </div>
-    </a>
   
+    <a href="/2019/10/14/MySQL-SQL-基础语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL SQL语法及数据库创建</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
